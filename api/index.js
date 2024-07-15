@@ -27,6 +27,16 @@ app.get('/products', (request, response) => {
     findResult = temp
   }
 
+  if (request.query.name !== undefined) {
+    temp = []
+    findResult.map(product => {
+      if (product.name.toLocaleLowerCase().indexOf(request.query.name.toLocaleLowerCase()) >= 0) {
+        temp.push(product);
+      }
+    });
+    findResult = temp
+  }
+
   response.send(findResult);
 });
 
