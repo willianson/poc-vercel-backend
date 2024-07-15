@@ -7,6 +7,16 @@ const port = 3000;
 app.get('/products', (request, response) => {
   let findResult = products
 
+  if (request.query.priceLower !== undefined) {
+    let temp = []
+    findResult.map(product => {
+      if (product.price <= Number(request.query.priceLower)) {
+        temp.push(product);
+      }
+    });
+    findResult = temp
+  }
+
   response.send(findResult);
 });
 
