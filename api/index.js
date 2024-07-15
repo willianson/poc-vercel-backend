@@ -9,8 +9,15 @@ app.get('/products', (request, response) => {
 
   response.send(findResult);
 });
-app.get('/', (request, response) => {
-  response.send('Hello, World!');
+
+app.get('/products/:id', (request, response) => {
+  const findResult = products.find(product => product.id == request.params.id)
+
+  if (findResult === undefined) {
+    response.send([]);
+  } else {
+    response.send(findResult);
+  }
 });
 
 app.listen(port, () => {
