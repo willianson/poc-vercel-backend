@@ -17,6 +17,16 @@ app.get('/products', (request, response) => {
     findResult = temp
   }
 
+  if (request.query.category !== undefined) {
+    temp = []
+    findResult.map(product => {
+      if (product.category === request.query.category) {
+        temp.push(product);
+      }
+    });
+    findResult = temp
+  }
+
   response.send(findResult);
 });
 
