@@ -3,7 +3,6 @@
     "start": "node api/index.js"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.44.3",
     "express": "^4.19.2"
   }
 }
