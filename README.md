@@ -3,11 +3,15 @@
 Project to understand the Vercel hosting service.
 
 ### About the experience
-
+> Surprising, much easier than I expected... The name Vercel made me worried, but deploying a REST app on Vercel's serverless service takes less than 3 minutes. Sign up with your GitHub account, select the repository, and boom... perfect.
+>
+> When I wrote this POC, I was with two people looking to learn JavaScript and Node.js, so this code was worth teaching them both simultaneously.
+> 
+> -- Willianson Araújo
 
 ### About the application
 This is a simple Node.js API that returns a list of products, allowing filtering by price, category, and name. 
-The API supports multi query parameters to perform the filtering.
+The API supports multi-query parameters to perform the filtering.
 
 ### 
 
